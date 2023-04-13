@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Windows10'
+    }
+
+  }
   stages {
     stage('Initialize') {
       agent any
