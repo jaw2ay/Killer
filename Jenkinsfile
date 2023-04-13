@@ -7,7 +7,12 @@ pipeline {
   }
   stages {
     stage('Initialize') {
-      agent any
+      agent {
+        node {
+          label 'Windows10'
+        }
+
+      }
       steps {
         echo 'Initializing Repo'
       }
